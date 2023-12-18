@@ -64,7 +64,7 @@ class AppBarContainerWidget extends StatelessWidget {
                       ]
                     ),
                   )),
-                  if(implementLeading) 
+                  if(implementTraling) 
                     Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(kDefaultIconSize),
