@@ -25,6 +25,7 @@ class AppBarContainerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset : false,
       body: Stack(
         children: [
           SizedBox(
@@ -39,18 +40,23 @@ class AppBarContainerWidget extends StatelessWidget {
               title: title ?? Row(
                 children: [
                   if(implementLeading) 
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(kDefaultIconSize)
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(kDefaultIconSize)
+                          ),
+                          color: Colors.white,
                         ),
-                        color: Colors.white,
-                      ),
-                      padding: EdgeInsets.all(kItemPadding),
-                      child: Icon(
-                        FontAwesomeIcons.arrowLeft,
-                        color: Colors.black,
-                        size: kDefaultIconSize,
+                        padding: EdgeInsets.all(kItemPadding),
+                        child: Icon(
+                          FontAwesomeIcons.arrowLeft,
+                          color: Colors.black,
+                          size: kDefaultIconSize,
+                        ),
                       ),
                     ),
                   Expanded(child: Center(
@@ -65,16 +71,21 @@ class AppBarContainerWidget extends StatelessWidget {
                     ),
                   )),
                   if(implementTraling) 
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(kDefaultIconSize),
-                        color: Colors.white,
-                      ),
-                      padding: EdgeInsets.all(kItemPadding),
-                      child: Icon(
-                        FontAwesomeIcons.bars,
-                        size: kDefaultIconSize,
-                        color: Colors.black,
+                    GestureDetector(
+                      onTap: () {
+                        
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(kDefaultIconSize),
+                          color: Colors.white,
+                        ),
+                        padding: EdgeInsets.all(kItemPadding),
+                        child: Icon(
+                          FontAwesomeIcons.bars,
+                          size: kDefaultIconSize,
+                          color: Colors.black,
+                        ),
                       ),
                     )
                 ],

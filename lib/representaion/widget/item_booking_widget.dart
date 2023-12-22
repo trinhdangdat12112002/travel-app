@@ -3,7 +3,7 @@ import 'package:travel_app/core/constants/dismenton_constaints.dart';
 import 'package:travel_app/core/helpers/image_helper.dart';
 
 class ItemBookingWidget extends StatelessWidget {
-  const ItemBookingWidget({super.key, required this.icon, required this.title, required this.description, this.ontap});
+  const ItemBookingWidget({Key? key, required this.icon, required this.title, required this.description,required this.ontap}) : super(key : key);
 
   final String icon;
   final String title;

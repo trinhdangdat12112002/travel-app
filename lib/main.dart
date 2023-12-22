@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 import 'package:travel_app/core/helpers/local_storage_helper.dart';
+import 'package:travel_app/representaion/screens/login_screen.dart';
 import 'package:travel_app/representaion/screens/splash_screen.dart';
 import 'package:travel_app/router.dart';
 import '../core/constants/color_constants.dart';
@@ -26,7 +27,7 @@ class MainApp extends StatelessWidget {
         scaffoldBackgroundColor: ColorPalette.backgroundScaffoldColor,
         backgroundColor: ColorPalette.backgroundScaffoldColor,
       ),
-      home: const SplashScreen(),
+      home: const LoginScreenn(),
       debugShowCheckedModeBanner: false,
       routes: routes,
     );

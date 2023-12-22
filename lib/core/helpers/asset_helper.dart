@@ -39,6 +39,15 @@ class AssetHelper {
   static const String icoCalendar = 'assets/icons/ico_calendar.png';
   static const String icoLocation = 'assets/icons/ico_location_blank.png';
 
+  static const String korea = 'assets/images/korea.png';
+  static const String turkey = 'assets/images/turkey.png';
+  static const String japan = 'assets/images/japan.png';
+  static const String dubai = 'assets/images/dubai.png';
+
+  static const String location = 'assets/icons/location.png';
+  static const String google = 'assets/icons/ico_google.png';
+  static const String facebook = 'assets/icons/ico_facebook.png';
+
 
 
 
